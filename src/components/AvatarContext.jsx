@@ -18,10 +18,24 @@ export const AvatarProvider = ({ children }) => {
 
   const styles = ['adventurer', 'bottts', 'pixel-art', 'avataaars'];
 
+  // Define supported traits per style
+  const supportedTraits = {
+    adventurer: ['gender', 'eyes', 'hair'],
+    bottts: [],
+    'pixel-art': [],
+    avataaars: [],
+  };
+
   useEffect(() => {
     setLoading(true);
     const timeout = setTimeout(() => {
-      const url = `https://api.dicebear.com/7.x/${style}/svg?seed=${seed}&backgroundColor=${bgColor.slice(1)}&gender=${gender}&eyes=${eyes}&hair=${hair}`;
+      let url = `https://api.dicebear.com/7.x/${style}/svg?seed=${seed}&backgroundColor=${bgColor.slice(1)}`;
+      const traits = supportedTraits[style] || [];
+
+      if (traits.includes('gender')) url += `&gender=${gender}`;
+      if (traits.includes('eyes')) url += `&eyes=${eyes}`;
+      if (traits.includes('hair')) url += `&hair=${hair}`;
+
       setAvatarUrl(url);
       setHistory(prev => {
         const updated = [url, ...prev.slice(0, 9)];

@@ -1,0 +1,27 @@
+/* AvatarPreviewStyles.css */
+
+.avatar-preview {
+  margin: 20px auto;
+  text-align: center;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.avatar-preview img {
+  border-radius: 50%;
+  box-shadow: 0 8px 24px rgba(20, 83, 220, 0.2);
+  transition: transform 0.3s ease;
+  width: 200px;
+  height: 200px;
+}
+
+.zoom-slider {
+  width: 200px;
+  margin-top: 15px;
+}
+
+.loader {
+  font-size: 18px;
+  color: #1453dc;
+  font-weight: bold;
+}

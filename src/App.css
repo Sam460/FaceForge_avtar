@@ -1,0 +1,40 @@
+.App {
+  font-family: 'Segoe UI', sans-serif;
+  text-align: center;
+  padding: 2rem;
+  background-color: #f9f9fb;
+}
+
+.avatar-app img {
+  border-radius: 12px;
+  border: 2px solid #1453dc;
+  margin-bottom: 1rem;
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.controls select,
+.controls input {
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.controls button {
+  padding: 10px;
+  border: none;
+  background-color: #1453dc;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.controls button:hover {
+  background-color: #0f3bbf;
+}

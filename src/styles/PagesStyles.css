@@ -1,0 +1,61 @@
+/* PagesStyles.css */
+
+.app-wrapper {
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 10px 0;
+  border-bottom: 2px solid #ccc;
+  margin-bottom: 20px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #1453dc;
+  font-weight: bold;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+  color: #0d3a9a;
+}
+
+.profile-page,
+.gallery-page,
+.home-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.profile-page img,
+.gallery-avatar {
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  gap: 16px;
+  width: 100%;
+  max-width: 600px;
+  padding: 10px;
+}
+
+.gallery-avatar {
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.gallery-avatar:hover {
+  transform: scale(1.05);
+}

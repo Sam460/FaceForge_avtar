@@ -1,0 +1,70 @@
+/* AvatarControlsStyles.css */
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 2px solid #1453dc;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(20, 83, 220, 0.1);
+  background-color: #f9fbff;
+}
+
+.controls label {
+  font-weight: 600;
+  color: #1453dc;
+  align-self: flex-start;
+}
+
+.controls select,
+.controls input[type="text"],
+.controls input[type="color"] {
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  width: 100%;
+}
+
+.controls button {
+  padding: 10px 14px;
+  border: none;
+  border-radius: 6px;
+  background-color: #1453dc;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.controls button:hover {
+  background-color: #0f3cb5;
+}
+
+.style-preview {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.style-preview img {
+  width: 40px;
+  height: 40px;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s, border-color 0.2s;
+}
+
+.style-preview img.selected {
+  border-color: #1453dc;
+}
+
+.style-preview img:hover {
+  transform: scale(1.1);
+}

@@ -1,0 +1,138 @@
+/* AvatarGenerator.css */
+
+.avatar-app {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 1rem;
+  background: var(--bg);
+  color: var(--text);
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.avatar-app.dark {
+  --bg: #1e1e1e;
+  --text: #f9f9f9;
+}
+
+.avatar-app:not(.dark) {
+  --bg: #ffffff;
+  --text: #222222;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.toggle-dark {
+  padding: 6px 12px;
+  background: #1453dc;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  border: none;
+}
+
+.avatar-preview {
+  margin: 1rem 0;
+  transition: transform 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+}
+
+.zoom-slider {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.controls label {
+  font-weight: bold;
+  margin-top: 0.5rem;
+}
+
+.controls select,
+.controls input[type='text'],
+.controls input[type='color'] {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: #f5f5f5;
+}
+
+.controls button {
+  margin-top: 0.5rem;
+  padding: 10px;
+  border: none;
+  background-color: #1453dc;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.controls button:hover {
+  background-color: #0f3bbf;
+}
+
+.loader {
+  font-size: 1rem;
+  font-style: italic;
+  color: gray;
+}
+
+.style-preview {
+  display: flex;
+  gap: 10px;
+  margin: 10px 0;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.style-preview img {
+  cursor: pointer;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  transition: transform 0.2s;
+}
+
+.style-preview img:hover {
+  transform: scale(1.05);
+}
+
+.style-preview img.selected {
+  border-color: #1453dc;
+}
+
+.history {
+  margin-top: 2rem;
+}
+
+.history-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+  justify-content: center;
+}
+
+.history-list img {
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: transform 0.2s;
+}
+
+.history-list img:hover {
+  transform: scale(1.1);
+}
